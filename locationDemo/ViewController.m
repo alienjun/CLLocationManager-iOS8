@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import "AJLocationManager.h"
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @end
 
@@ -16,7 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [[AJLocationManager shareLocation] getLocationCoordinate:^(CLLocationCoordinate2D locationCorrrdinate) {
+        NSLog(@"success:%f,%f",locationCorrrdinate.longitude,locationCorrrdinate.latitude);
+    }];
+    
+    
+    //
+    [[AJLocationManager shareLocation] getAddress:^(NSString *addressString) {
+        NSLog(@"%@",addressString);
+        [_addressLabel setText:addressString];
+    } error:^(NSError *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,6 +14,7 @@
 		EC7C2CDF19CEB18D00F46D5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7C2CDE19CEB18D00F46D5A /* Images.xcassets */; };
 		EC7C2CE219CEB18D00F46D5A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC7C2CE019CEB18D00F46D5A /* LaunchScreen.xib */; };
 		EC7C2CEE19CEB18D00F46D5A /* locationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C2CED19CEB18D00F46D5A /* locationDemoTests.m */; };
+		EC7C2CFA19CEB1DC00F46D5A /* AJLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C2CF919CEB1DC00F46D5A /* AJLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		EC7C2CE719CEB18D00F46D5A /* locationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = locationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7C2CEC19CEB18D00F46D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC7C2CED19CEB18D00F46D5A /* locationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = locationDemoTests.m; sourceTree = "<group>"; };
+		EC7C2CF819CEB1DC00F46D5A /* AJLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJLocationManager.h; sourceTree = "<group>"; };
+		EC7C2CF919CEB1DC00F46D5A /* AJLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		EC7C2CD019CEB18D00F46D5A /* locationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EC7C2CF719CEB19500F46D5A /* AJLocation */,
 				EC7C2CD519CEB18D00F46D5A /* AppDelegate.h */,
 				EC7C2CD619CEB18D00F46D5A /* AppDelegate.m */,
 				EC7C2CD819CEB18D00F46D5A /* ViewController.h */,
@@ -117,6 +121,15 @@
 				EC7C2CEC19CEB18D00F46D5A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC7C2CF719CEB19500F46D5A /* AJLocation */ = {
+			isa = PBXGroup;
+			children = (
+				EC7C2CF819CEB1DC00F46D5A /* AJLocationManager.h */,
+				EC7C2CF919CEB1DC00F46D5A /* AJLocationManager.m */,
+			);
+			name = AJLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC7C2CDA19CEB18D00F46D5A /* ViewController.m in Sources */,
+				EC7C2CFA19CEB1DC00F46D5A /* AJLocationManager.m in Sources */,
 				EC7C2CD719CEB18D00F46D5A /* AppDelegate.m in Sources */,
 				EC7C2CD419CEB18D00F46D5A /* main.m in Sources */,
 			);
@@ -344,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = locationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = locationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +428,7 @@
 				EC7C2CF319CEB18D00F46D5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC7C2CF419CEB18D00F46D5A /* Build configuration list for PBXNativeTarget "locationDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +437,7 @@
 				EC7C2CF619CEB18D00F46D5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
